@@ -1,0 +1,13 @@
+/vendor
+/.idea
+/.vscode
+/.vagrant
+.phpunit.result.cache
+.env
+.env.backup
+.env.testing
+**/.DS_Store
+_ide_helper.php
+.phpstorm.meta.php
+auth.json
+ray.php

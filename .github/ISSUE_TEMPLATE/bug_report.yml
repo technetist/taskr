@@ -1,0 +1,70 @@
+name: Bug Report
+description: Create a report to help us improve or fix things
+labels: [ ":bug: Bug" ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: Provide a clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detail the steps that would replicate this issue.
+      placeholder: |
+        1. Go to '...'
+        2. Run command '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behaviour
+      description: Provide clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots or Additional Context
+      description: Provide any additional context and screenshots here to help us solve this issue.
+    validations:
+      required: false
+  - type: input
+    id: terminaldetails
+    attributes:
+      label: Terminal Details
+      description: |
+        Please provide details of the terminal used which presents the reported issue.
+      placeholder: (eg. PowerShell 7.3.0.0 on Windows 11, iTerm2 3.4.18 on MacOS 13.0.1)
+    validations:
+      required: false
+  - type: input
+    id: appversion
+    attributes:
+      label: Exact Taskr Version
+      description: This can be found using the `taskr version` command. Please provide an exact version.
+      placeholder: (eg. v1.1.12)
+    validations:
+      required: true
+  - type: input
+    id: phpversion
+    attributes:
+      label: PHP Version
+      description: Provide the command line PHP version here. Keep in mind your command line PHP version may differ to that of your webserver.
+      placeholder: (eg. 8.0)
+    validations:
+      required: false
+  - type: input
+    id: composerversion
+    attributes:
+      label: Composer Version
+      description: Provide the version of Composer you are using.
+      placeholder: (eg. 2.4.4)
+    validations:
+      required: false

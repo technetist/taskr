@@ -1,0 +1,27 @@
+name: lint-php
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  pint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          extensions: mbstring
+          tools: php-cs-fixer, phpunit
+
+      - name: Install
+        run: composer install --prefer-dist
+
+      - name: Run pint
+        run: composer sniff
